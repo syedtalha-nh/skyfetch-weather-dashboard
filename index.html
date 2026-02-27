@@ -16,6 +16,15 @@
       <button id="searchBtn">Search</button>
     </div>
 
+    <!-- Recent Searches -->
+    <div class="recent-section">
+      <div class="recent-header">
+        <h3>Recent Searches</h3>
+        <button id="clearHistoryBtn" class="clear-btn">Clear</button>
+      </div>
+      <div id="recentSearches" class="recent-container"></div>
+    </div>
+
     <!-- Message / Loading / Error -->
     <div id="message"></div>
 
@@ -27,11 +36,10 @@
       <img id="weather-icon" />
     </div>
 
-    <!-- Forecast Section -->
+    <!-- Forecast -->
     <div id="forecast" class="forecast-container"></div>
   </div>
 
-  <!-- Axios CDN -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="app.js"></script>
 
