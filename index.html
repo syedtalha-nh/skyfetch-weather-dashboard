@@ -8,31 +8,32 @@
 <body>
 
   <div class="container">
-    <h1>SkyFetch Weather Dashboard</h1>
+    <h1>SkyFetch Weather Dashboard 🌤️</h1>
 
-    <!-- 🔍 Search Section -->
+    <!-- Search Section -->
     <div class="search-section">
-      <input 
-        type="text" 
-        id="cityInput" 
-        placeholder="Enter city name..." 
-      />
+      <input type="text" id="cityInput" placeholder="Enter city name..." />
       <button id="searchBtn">Search</button>
     </div>
 
-    <!-- 📢 Message / Loading / Error -->
+    <!-- Message / Loading / Error -->
     <div id="message"></div>
 
-    <!-- 🌦 Weather Display -->
+    <!-- Current Weather -->
     <div class="weather-container">
       <h2 id="city-name"></h2>
       <p id="temperature"></p>
       <p id="description"></p>
       <img id="weather-icon" />
     </div>
+
+    <!-- Forecast Section -->
+    <div id="forecast" class="forecast-container"></div>
   </div>
 
+  <!-- Axios CDN -->
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   <script src="app.js"></script>
+
 </body>
 </html>
