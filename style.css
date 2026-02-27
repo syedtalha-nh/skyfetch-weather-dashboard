@@ -1,24 +1,24 @@
 body {
   font-family: Arial, sans-serif;
-  background-color: #87ceeb;
+  background: linear-gradient(to right, #74ebd5, #ACB6E5);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .container {
   background: white;
-  padding: 30px;
-  border-radius: 10px;
+  padding: 25px;
+  border-radius: 12px;
+  width: 420px;
   text-align: center;
-  width: 350px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* 🔍 Search Section */
+/* Search Section */
 .search-section {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 #cityInput {
@@ -36,28 +36,28 @@ body {
 #searchBtn {
   padding: 8px 12px;
   border: none;
-  background-color: #007bff;
+  background: #007bff;
   color: white;
   border-radius: 5px;
   cursor: pointer;
 }
 
 #searchBtn:hover {
-  background-color: #0056b3;
+  background: #0056b3;
 }
 
 #searchBtn:disabled {
-  background-color: gray;
+  background: gray;
   cursor: not-allowed;
 }
 
-/* ❌ Error Message */
+/* Error */
 .error {
   color: red;
-  margin-top: 10px;
+  margin: 10px 0;
 }
 
-/* ⏳ Loading Spinner */
+/* Spinner */
 .spinner {
   border: 4px solid #f3f3f3;
   border-top: 4px solid #007bff;
@@ -71,5 +71,34 @@ body {
 @keyframes spin {
   100% {
     transform: rotate(360deg);
+  }
+}
+
+/* Forecast Grid */
+.forecast-container {
+  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  gap: 10px;
+}
+
+.forecast-card {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.forecast-card:hover {
+  transform: scale(1.05);
+}
+
+.forecast-card img {
+  width: 50px;
+}
+
+@media (max-width: 500px) {
+  .container {
+    width: 95%;
   }
 }
