@@ -11,14 +11,14 @@ body {
   background: white;
   padding: 25px;
   border-radius: 12px;
-  width: 420px;
+  width: 450px;
   text-align: center;
   box-shadow: 0 6px 15px rgba(0,0,0,0.2);
 }
 
-/* Search Section */
+/* Search */
 .search-section {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 #cityInput {
@@ -26,11 +26,6 @@ body {
   width: 65%;
   border-radius: 5px;
   border: 1px solid #ccc;
-}
-
-#cityInput:focus {
-  outline: none;
-  border-color: #007bff;
 }
 
 #searchBtn {
@@ -48,13 +43,45 @@ body {
 
 #searchBtn:disabled {
   background: gray;
-  cursor: not-allowed;
 }
 
-/* Error */
-.error {
-  color: red;
-  margin: 10px 0;
+/* Recent Searches */
+.recent-section {
+  margin-bottom: 15px;
+}
+
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recent-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 5px;
+}
+
+.recent-btn {
+  padding: 5px 10px;
+  background: #f1f1f1;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.recent-btn:hover {
+  background: #ddd;
+}
+
+.clear-btn {
+  background: red;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
 }
 
 /* Spinner */
@@ -69,12 +96,16 @@ body {
 }
 
 @keyframes spin {
-  100% {
-    transform: rotate(360deg);
-  }
+  100% { transform: rotate(360deg); }
 }
 
-/* Forecast Grid */
+/* Error */
+.error {
+  color: red;
+  margin: 10px 0;
+}
+
+/* Forecast */
 .forecast-container {
   margin-top: 20px;
   display: grid;
